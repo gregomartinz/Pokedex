@@ -1,37 +1,36 @@
 //
-//  ClasesTableViewController.swift
+//  TypeRacesTableViewController.swift
 //  Pokedex
 //
-//  Created by Gregorio Martínez Luque on 24/11/15.
+//  Created by Gregorio Martínez Luque on 25/11/15.
 //  Copyright © 2015 Gregorio Martínez Luque. All rights reserved.
 //
 
 import UIKit
 
-class ClasesTableViewController: UITableViewController {
-    
+class TypeRacesTableViewController: UITableViewController {
     
     var pokedexModel = PokedexModel()
     var type : Type?
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-
+    
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return type!.races.count
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Pokemon Cell", forIndexPath: indexPath)
         
@@ -65,5 +64,4 @@ class ClasesTableViewController: UITableViewController {
             }
         }
     }
-
 }
